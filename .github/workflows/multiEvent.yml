@@ -4,7 +4,9 @@ on:
         branches:
             - test
 
-
+    pull_request:
+        branches:
+            - main
 
 
 jobs:
@@ -14,5 +16,12 @@ jobs:
         steps:
             - name: "Runs on push on test branch"
               run: echo "Push on Test branch."
+
+    on-pr:
+        if: github.event_name == 'pull_request'
+        runs-on: ubunu-latest
+        steps:
+            - name: "Runs of PR to main branch"
+              run: echo "Pull Request to Main branch."
 
 

@@ -1,16 +1,16 @@
-name: "Commit on Any Branch Workflow"
+# name: "Commit on Any Branch Workflow"
 
-on: push
+# on: push
 
-jobs:
-    any-branch-commit:
-        runs-on: ubuntu-latest
-        steps:
-            - name: "Runs on commit on any branch"
-              run: echo "Commit is done on branch"
+# jobs:
+#     any-branch-commit:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: "Runs on commit on any branch"
+#               run: echo "Commit is done on branch"
 
-            - name: "Print Date of commit"
-              run: date
+#             - name: "Print Date of commit"
+#               run: date
 
 
 

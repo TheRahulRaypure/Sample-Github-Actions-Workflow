@@ -12,6 +12,9 @@ on:
         types:
             - opened
             - closed
+    
+    # schedule:
+    #     - cron: '0 0 * * *'  # Runs daily at midnight UTC
 
     workflow_dispatch:
 
@@ -51,4 +54,10 @@ jobs:
             - name: "Runs on PR closed"
               run: echo "Pull Request Closed."
 
+    on-schedule:
+        if: github.event_name == 'schedule'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Runs on schedule"
+              run: echo "Scheduled run."
 

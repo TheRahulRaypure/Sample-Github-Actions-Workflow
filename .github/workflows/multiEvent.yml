@@ -1,4 +1,5 @@
 name: "Multievent Workflow"
+
 on:
     push:
         branches:
@@ -8,6 +9,7 @@ on:
     pull_request:
         branches:
             - main
+    workflow_dispatch:
 
 
 jobs:

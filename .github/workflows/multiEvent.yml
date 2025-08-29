@@ -13,6 +13,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: "Runs on push on test branch"
-              run: "Push on Test branch."
+              run: echo "Push on Test branch."
 
 

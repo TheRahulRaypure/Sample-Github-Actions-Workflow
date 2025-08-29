@@ -26,4 +26,11 @@ jobs:
             - name: "Runs of PR to main branch"
               run: echo "Pull Request to Main branch."
 
+    on-workflow-dispatch:
+        if: github.event_name == 'workflow_dispatch'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Runs on workflow dispatch"
+              run: echo "Workflow dispatched manually."
+
 
